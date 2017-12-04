@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF349CB5-CDA0-4C8A-AC2F-9C697D8C100A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ARS.My.MyApplication</StartupObject>
+    <RootNamespace>ARS</RootNamespace>
+    <AssemblyName>ARS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ARS.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ARS.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icons\prsblue.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CyberClasses">
+      <HintPath>..\..\CyberClasses\CyberClasses\bin\Debug\CyberClasses.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Customer.vb" />
+    <Compile Include="Classes\ImageType.vb" />
+    <Compile Include="Classes\scannedId.vb" />
+    <Compile Include="Classes\SecondaryMetalRecycler.vb" />
+    <Compile Include="Classes\Ticket.vb" />
+    <Compile Include="Classes\TicketItems.vb" />
+    <Compile Include="Classes\TransportTrailer.vb" />
+    <Compile Include="Classes\TransportVehilcle.vb" />
+    <Compile Include="Custom Controls\ImageControls.designer.vb">
+      <DependentUpon>ImageControls.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\ImageControls.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerSearchForm.Designer.vb">
+      <DependentUpon>CustomerSearchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerSearchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BarcodeScannerForm.designer.vb">
+      <DependentUpon>BarcodeScannerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BarcodeScannerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImagePopup.designer.vb">
+      <DependentUpon>frmImagePopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImagePopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NewCustomerForm.Designer.vb">
+      <DependentUpon>NewCustomerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewCustomerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Custom Controls\ImageControls.resx">
+      <DependentUpon>ImageControls.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerSearchForm.resx">
+      <DependentUpon>CustomerSearchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BarcodeScannerForm.resx">
+      <DependentUpon>BarcodeScannerForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImagePopup.resx">
+      <DependentUpon>frmImagePopup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewCustomerForm.resx">
+      <DependentUpon>NewCustomerForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\barcode_scanner.ico" />
+    <Content Include="Icons\Cam.ico" />
+    <Content Include="Icons\cancel.ico" />
+    <Content Include="Icons\cancel1.ico" />
+    <Content Include="Icons\Cash.ico" />
+    <Content Include="Icons\CheckBook.ico" />
+    <Content Include="Icons\clear.ico" />
+    <Content Include="Icons\clear2.ico" />
+    <Content Include="Icons\clipboard.ico" />
+    <Content Include="Icons\clipboard1.ico" />
+    <Content Include="Icons\document.ico" />
+    <Content Include="Icons\document1.ico" />
+    <Content Include="Icons\DoubleClickToSign.jpg" />
+    <Content Include="Icons\expenses.ico" />
+    <Content Include="Icons\expenses1.ico" />
+    <Content Include="Icons\FlashDrive.ico" />
+    <Content Include="Icons\greenarrowLeft.ico" />
+    <Content Include="Icons\greenarrowRight.ico" />
+    <Content Include="Icons\help.ico" />
+    <Content Include="Icons\LeftArrow2.ico" />
+    <Content Include="Icons\new.ico" />
+    <Content Include="Icons\new1.ico" />
+    <Content Include="Icons\ok.ico" />
+    <Content Include="Icons\ok1.ico" />
+    <Content Include="Icons\okay.ico" />
+    <Content Include="Icons\Pen.ico" />
+    <Content Include="Icons\people.ico" />
+    <Content Include="Icons\PickupTruck.jpg" />
+    <Content Include="Icons\Print.ico" />
+    <Content Include="Icons\prsblue.ico" />
+    <Content Include="Icons\prsred.ico" />
+    <Content Include="Icons\prsyellow.ico" />
+    <Content Include="Icons\RecyclePic-01.png" />
+    <Content Include="Icons\refresh.ico" />
+    <Content Include="Icons\reports.ico" />
+    <Content Include="Icons\Save.ico" />
+    <Content Include="Icons\Scanner.ico" />
+    <Content Include="Icons\search.ico" />
+    <Content Include="Icons\search1.ico" />
+    <Content Include="Icons\tools.ico" />
+    <Content Include="Icons\tools1.ico" />
+    <Content Include="Icons\Trailer.jpg" />
+    <Content Include="Icons\Truck.ico" />
+    <None Include="Resources\Truck.ico" />
+    <None Include="Resources\Trailer.jpg" />
+    <None Include="Resources\tools1.ico" />
+    <None Include="Resources\tools.ico" />
+    <None Include="Resources\search1.ico" />
+    <None Include="Resources\search.ico" />
+    <None Include="Resources\Scanner.ico" />
+    <None Include="Resources\Save.ico" />
+    <None Include="Resources\reports.ico" />
+    <None Include="Resources\refresh.ico" />
+    <None Include="Resources\RecyclePic-01.png" />
+    <None Include="Resources\prsyellow.ico" />
+    <None Include="Resources\prsred.ico" />
+    <None Include="Resources\prsblue.ico" />
+    <None Include="Resources\Print.ico" />
+    <None Include="Resources\PickupTruck.jpg" />
+    <None Include="Resources\people.ico" />
+    <None Include="Resources\Pen.ico" />
+    <None Include="Resources\okay.ico" />
+    <None Include="Resources\ok1.ico" />
+    <None Include="Resources\ok.ico" />
+    <None Include="Resources\new1.ico" />
+    <None Include="Resources\new.ico" />
+    <None Include="Resources\LeftArrow2.ico" />
+    <None Include="Resources\help.ico" />
+    <None Include="Resources\greenarrowRight.ico" />
+    <None Include="Resources\greenarrowLeft.ico" />
+    <None Include="Resources\FlashDrive.ico" />
+    <None Include="Resources\expenses1.ico" />
+    <None Include="Resources\expenses.ico" />
+    <None Include="Resources\DoubleClickToSign.jpg" />
+    <None Include="Resources\document1.ico" />
+    <None Include="Resources\document.ico" />
+    <None Include="Resources\clipboard1.ico" />
+    <None Include="Resources\clipboard.ico" />
+    <None Include="Resources\clear2.ico" />
+    <None Include="Resources\clear.ico" />
+    <None Include="Resources\CheckBook.ico" />
+    <None Include="Resources\Cash.ico" />
+    <None Include="Resources\cancel1.ico" />
+    <None Include="Resources\cancel.ico" />
+    <None Include="Resources\Cam.ico" />
+    <None Include="Resources\barcode_scanner.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
