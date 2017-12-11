@@ -73,7 +73,6 @@ Partial Class MainForm
         Me.btnExpenses = New System.Windows.Forms.ToolStripButton()
         Me.btnReports = New System.Windows.Forms.ToolStripButton()
         Me.btnAdvanced = New System.Windows.Forms.ToolStripButton()
-        Me.btnScanID = New System.Windows.Forms.ToolStripButton()
         Me.ssMain = New System.Windows.Forms.StatusStrip()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -113,6 +112,9 @@ Partial Class MainForm
         Me.ProgramHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutARSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ScanCustomerIDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ScanCustomerIDToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ScanCustomerIDToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsPurchasing.SuspendLayout()
         Me.tsInventory.SuspendLayout()
         Me.tsExpenses.SuspendLayout()
@@ -162,23 +164,24 @@ Partial Class MainForm
         '
         'btnTicketsNew
         '
+        Me.btnTicketsNew.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanCustomerIDToolStripMenuItem})
         Me.btnTicketsNew.Image = Global.ARS.My.Resources.Resources.CheckBook
         Me.btnTicketsNew.Name = "btnTicketsNew"
-        Me.btnTicketsNew.Size = New System.Drawing.Size(122, 22)
+        Me.btnTicketsNew.Size = New System.Drawing.Size(156, 26)
         Me.btnTicketsNew.Text = "New"
         '
         'btnTicketsVoid
         '
         Me.btnTicketsVoid.Image = Global.ARS.My.Resources.Resources.cancel
         Me.btnTicketsVoid.Name = "btnTicketsVoid"
-        Me.btnTicketsVoid.Size = New System.Drawing.Size(122, 22)
+        Me.btnTicketsVoid.Size = New System.Drawing.Size(156, 26)
         Me.btnTicketsVoid.Text = "Void/Edit"
         '
         'btnTicketsReprint
         '
         Me.btnTicketsReprint.Image = Global.ARS.My.Resources.Resources.Print
         Me.btnTicketsReprint.Name = "btnTicketsReprint"
-        Me.btnTicketsReprint.Size = New System.Drawing.Size(122, 22)
+        Me.btnTicketsReprint.Size = New System.Drawing.Size(156, 26)
         Me.btnTicketsReprint.Text = "Reprint"
         '
         'ToolStripSeparator11
@@ -196,16 +199,18 @@ Partial Class MainForm
         '
         'btnCustomersNew
         '
+        Me.btnCustomersNew.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanCustomerIDToolStripMenuItem1})
         Me.btnCustomersNew.Image = Global.ARS.My.Resources.Resources.people
         Me.btnCustomersNew.Name = "btnCustomersNew"
-        Me.btnCustomersNew.Size = New System.Drawing.Size(117, 22)
+        Me.btnCustomersNew.Size = New System.Drawing.Size(156, 26)
         Me.btnCustomersNew.Text = "New"
         '
         'btnCustomersManage
         '
+        Me.btnCustomersManage.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanCustomerIDToolStripMenuItem2})
         Me.btnCustomersManage.Image = Global.ARS.My.Resources.Resources.people
         Me.btnCustomersManage.Name = "btnCustomersManage"
-        Me.btnCustomersManage.Size = New System.Drawing.Size(117, 22)
+        Me.btnCustomersManage.Size = New System.Drawing.Size(156, 26)
         Me.btnCustomersManage.Text = "Manage"
         '
         'ToolStripSeparator2
@@ -427,7 +432,7 @@ Partial Class MainForm
         'tsHome
         '
         Me.tsHome.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.tsHome.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnPurchasing, Me.btnSales, Me.btnInventory, Me.btnExpenses, Me.btnReports, Me.btnAdvanced, Me.btnScanID})
+        Me.tsHome.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnPurchasing, Me.btnSales, Me.btnInventory, Me.btnExpenses, Me.btnReports, Me.btnAdvanced})
         Me.tsHome.Location = New System.Drawing.Point(0, 24)
         Me.tsHome.Name = "tsHome"
         Me.tsHome.Size = New System.Drawing.Size(1224, 27)
@@ -487,15 +492,6 @@ Partial Class MainForm
         Me.btnAdvanced.Name = "btnAdvanced"
         Me.btnAdvanced.Size = New System.Drawing.Size(73, 24)
         Me.btnAdvanced.Text = "Settings"
-        '
-        'btnScanID
-        '
-        Me.btnScanID.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btnScanID.Image = Global.ARS.My.Resources.Resources.barcode_scanner
-        Me.btnScanID.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnScanID.Name = "btnScanID"
-        Me.btnScanID.Size = New System.Drawing.Size(24, 24)
-        Me.btnScanID.Text = "Scan Customer ID"
         '
         'ssMain
         '
@@ -753,6 +749,27 @@ Partial Class MainForm
         Me.ToolStripMenuItem6.Size = New System.Drawing.Size(194, 22)
         Me.ToolStripMenuItem6.Text = "Cap All Customer Data"
         '
+        'ScanCustomerIDToolStripMenuItem
+        '
+        Me.ScanCustomerIDToolStripMenuItem.Image = Global.ARS.My.Resources.Resources.barcode_scanner
+        Me.ScanCustomerIDToolStripMenuItem.Name = "ScanCustomerIDToolStripMenuItem"
+        Me.ScanCustomerIDToolStripMenuItem.Size = New System.Drawing.Size(172, 26)
+        Me.ScanCustomerIDToolStripMenuItem.Text = "Scan Customer ID"
+        '
+        'ScanCustomerIDToolStripMenuItem1
+        '
+        Me.ScanCustomerIDToolStripMenuItem1.Image = Global.ARS.My.Resources.Resources.barcode_scanner
+        Me.ScanCustomerIDToolStripMenuItem1.Name = "ScanCustomerIDToolStripMenuItem1"
+        Me.ScanCustomerIDToolStripMenuItem1.Size = New System.Drawing.Size(172, 26)
+        Me.ScanCustomerIDToolStripMenuItem1.Text = "Scan Customer ID"
+        '
+        'ScanCustomerIDToolStripMenuItem2
+        '
+        Me.ScanCustomerIDToolStripMenuItem2.Image = Global.ARS.My.Resources.Resources.barcode_scanner
+        Me.ScanCustomerIDToolStripMenuItem2.Name = "ScanCustomerIDToolStripMenuItem2"
+        Me.ScanCustomerIDToolStripMenuItem2.Size = New System.Drawing.Size(172, 26)
+        Me.ScanCustomerIDToolStripMenuItem2.Text = "Scan Customer ID"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -884,5 +901,7 @@ Partial Class MainForm
     Friend WithEvents ProgramHelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutARSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem6 As ToolStripMenuItem
-    Friend WithEvents btnScanID As ToolStripButton
+    Friend WithEvents ScanCustomerIDToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ScanCustomerIDToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ScanCustomerIDToolStripMenuItem2 As ToolStripMenuItem
 End Class

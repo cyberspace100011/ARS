@@ -27,6 +27,8 @@ Partial Class NewCustomerForm
         Me.cboIDType = New System.Windows.Forms.ComboBox()
         Me.dtpBirthdate = New System.Windows.Forms.DateTimePicker()
         Me.dtpIDExpiration = New System.Windows.Forms.DateTimePicker()
+        Me.txtRace = New System.Windows.Forms.TextBox()
+        Me.txtHairColor = New System.Windows.Forms.TextBox()
         Me.txtSex = New System.Windows.Forms.TextBox()
         Me.txtWeight = New System.Windows.Forms.TextBox()
         Me.Label21 = New System.Windows.Forms.Label()
@@ -43,7 +45,9 @@ Partial Class NewCustomerForm
         Me.Label13 = New System.Windows.Forms.Label()
         Me.txtIDNumber = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ctxDL = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -97,9 +101,9 @@ Partial Class NewCustomerForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCusZip = New System.Windows.Forms.TextBox()
         Me.grpEmployer = New System.Windows.Forms.GroupBox()
+        Me.txtEmpTelephone = New System.Windows.Forms.MaskedTextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.txtEmpName = New System.Windows.Forms.TextBox()
-        Me.txtEmpTelephone = New System.Windows.Forms.TextBox()
         Me.Label32 = New System.Windows.Forms.Label()
         Me.txtEmpAddress1 = New System.Windows.Forms.TextBox()
         Me.Label31 = New System.Windows.Forms.Label()
@@ -119,12 +123,8 @@ Partial Class NewCustomerForm
         Me.txtCusLName = New System.Windows.Forms.TextBox()
         Me.txtCusMI = New System.Windows.Forms.TextBox()
         Me.txtCusFName = New System.Windows.Forms.TextBox()
-        Me.txtCusTelephone = New System.Windows.Forms.TextBox()
         Me.grpCustomerInfo = New System.Windows.Forms.GroupBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.txtHairColor = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.txtRace = New System.Windows.Forms.TextBox()
+        Me.txtCusTelephone = New System.Windows.Forms.MaskedTextBox()
         Me.grpCusIDinfo.SuspendLayout()
         Me.ctxDL.SuspendLayout()
         Me.ctxCusPhoto.SuspendLayout()
@@ -166,7 +166,7 @@ Partial Class NewCustomerForm
         Me.grpCusIDinfo.Name = "grpCusIDinfo"
         Me.grpCusIDinfo.Padding = New System.Windows.Forms.Padding(2)
         Me.grpCusIDinfo.Size = New System.Drawing.Size(435, 235)
-        Me.grpCusIDinfo.TabIndex = 8
+        Me.grpCusIDinfo.TabIndex = 1
         Me.grpCusIDinfo.TabStop = False
         Me.grpCusIDinfo.Text = "Identification (Required)"
         '
@@ -198,6 +198,28 @@ Partial Class NewCustomerForm
         Me.dtpIDExpiration.Size = New System.Drawing.Size(178, 20)
         Me.dtpIDExpiration.TabIndex = 8
         '
+        'txtRace
+        '
+        Me.txtRace.BackColor = System.Drawing.SystemColors.Window
+        Me.txtRace.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtRace.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRace.Location = New System.Drawing.Point(273, 142)
+        Me.txtRace.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtRace.Name = "txtRace"
+        Me.txtRace.Size = New System.Drawing.Size(78, 23)
+        Me.txtRace.TabIndex = 10
+        '
+        'txtHairColor
+        '
+        Me.txtHairColor.BackColor = System.Drawing.SystemColors.Window
+        Me.txtHairColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtHairColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHairColor.Location = New System.Drawing.Point(191, 142)
+        Me.txtHairColor.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtHairColor.Name = "txtHairColor"
+        Me.txtHairColor.Size = New System.Drawing.Size(78, 23)
+        Me.txtHairColor.TabIndex = 9
+        '
         'txtSex
         '
         Me.txtSex.BackColor = System.Drawing.SystemColors.Window
@@ -207,7 +229,7 @@ Partial Class NewCustomerForm
         Me.txtSex.Margin = New System.Windows.Forms.Padding(2)
         Me.txtSex.Name = "txtSex"
         Me.txtSex.Size = New System.Drawing.Size(78, 23)
-        Me.txtSex.TabIndex = 10
+        Me.txtSex.TabIndex = 7
         '
         'txtWeight
         '
@@ -366,6 +388,16 @@ Partial Class NewCustomerForm
         Me.Label12.TabIndex = 10
         Me.Label12.Text = "ID Number"
         '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(270, 129)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(33, 13)
+        Me.Label20.TabIndex = 10
+        Me.Label20.Text = "Race"
+        '
         'Label11
         '
         Me.Label11.AutoSize = True
@@ -375,6 +407,16 @@ Partial Class NewCustomerForm
         Me.Label11.Size = New System.Drawing.Size(100, 13)
         Me.Label11.TabIndex = 10
         Me.Label11.Text = "Identificcation Type"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(188, 129)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(53, 13)
+        Me.Label19.TabIndex = 10
+        Me.Label19.Text = "Hair Color"
         '
         'ToolStripMenuItem2
         '
@@ -445,7 +487,7 @@ Partial Class NewCustomerForm
         Me.grpImages.Name = "grpImages"
         Me.grpImages.Padding = New System.Windows.Forms.Padding(2)
         Me.grpImages.Size = New System.Drawing.Size(430, 233)
-        Me.grpImages.TabIndex = 10
+        Me.grpImages.TabIndex = 4
         Me.grpImages.TabStop = False
         Me.grpImages.Text = "Customer Images"
         '
@@ -486,7 +528,7 @@ Partial Class NewCustomerForm
         Me.txtTrDescription.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTrDescription.Name = "txtTrDescription"
         Me.txtTrDescription.Size = New System.Drawing.Size(318, 23)
-        Me.txtTrDescription.TabIndex = 6
+        Me.txtTrDescription.TabIndex = 10
         '
         'cboVYearofMfg
         '
@@ -495,7 +537,7 @@ Partial Class NewCustomerForm
         Me.cboVYearofMfg.Margin = New System.Windows.Forms.Padding(2)
         Me.cboVYearofMfg.Name = "cboVYearofMfg"
         Me.cboVYearofMfg.Size = New System.Drawing.Size(116, 21)
-        Me.cboVYearofMfg.TabIndex = 12
+        Me.cboVYearofMfg.TabIndex = 6
         '
         'cboTrColor
         '
@@ -504,7 +546,7 @@ Partial Class NewCustomerForm
         Me.cboTrColor.Margin = New System.Windows.Forms.Padding(2)
         Me.cboTrColor.Name = "cboTrColor"
         Me.cboTrColor.Size = New System.Drawing.Size(96, 21)
-        Me.cboTrColor.TabIndex = 12
+        Me.cboTrColor.TabIndex = 11
         '
         'cboVColor
         '
@@ -513,7 +555,7 @@ Partial Class NewCustomerForm
         Me.cboVColor.Margin = New System.Windows.Forms.Padding(2)
         Me.cboVColor.Name = "cboVColor"
         Me.cboVColor.Size = New System.Drawing.Size(96, 21)
-        Me.cboVColor.TabIndex = 12
+        Me.cboVColor.TabIndex = 5
         '
         'cboVModel
         '
@@ -522,7 +564,7 @@ Partial Class NewCustomerForm
         Me.cboVModel.Margin = New System.Windows.Forms.Padding(2)
         Me.cboVModel.Name = "cboVModel"
         Me.cboVModel.Size = New System.Drawing.Size(89, 21)
-        Me.cboVModel.TabIndex = 12
+        Me.cboVModel.TabIndex = 4
         '
         'dtpTrTagExpiration
         '
@@ -531,7 +573,7 @@ Partial Class NewCustomerForm
         Me.dtpTrTagExpiration.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpTrTagExpiration.Name = "dtpTrTagExpiration"
         Me.dtpTrTagExpiration.Size = New System.Drawing.Size(130, 20)
-        Me.dtpTrTagExpiration.TabIndex = 11
+        Me.dtpTrTagExpiration.TabIndex = 9
         '
         'Label44
         '
@@ -586,7 +628,7 @@ Partial Class NewCustomerForm
         Me.cboVMake.Margin = New System.Windows.Forms.Padding(2)
         Me.cboVMake.Name = "cboVMake"
         Me.cboVMake.Size = New System.Drawing.Size(118, 21)
-        Me.cboVMake.TabIndex = 12
+        Me.cboVMake.TabIndex = 3
         '
         'dtpVTagExpiration
         '
@@ -595,7 +637,7 @@ Partial Class NewCustomerForm
         Me.dtpVTagExpiration.Margin = New System.Windows.Forms.Padding(2)
         Me.dtpVTagExpiration.Name = "dtpVTagExpiration"
         Me.dtpVTagExpiration.Size = New System.Drawing.Size(130, 20)
-        Me.dtpVTagExpiration.TabIndex = 11
+        Me.dtpVTagExpiration.TabIndex = 2
         '
         'grpTransport
         '
@@ -630,7 +672,7 @@ Partial Class NewCustomerForm
         Me.grpTransport.Name = "grpTransport"
         Me.grpTransport.Padding = New System.Windows.Forms.Padding(2)
         Me.grpTransport.Size = New System.Drawing.Size(338, 322)
-        Me.grpTransport.TabIndex = 11
+        Me.grpTransport.TabIndex = 2
         Me.grpTransport.TabStop = False
         Me.grpTransport.Text = "Transport Info"
         '
@@ -653,7 +695,7 @@ Partial Class NewCustomerForm
         Me.txtTrTagState.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTrTagState.Name = "txtTrTagState"
         Me.txtTrTagState.Size = New System.Drawing.Size(61, 23)
-        Me.txtTrTagState.TabIndex = 6
+        Me.txtTrTagState.TabIndex = 8
         '
         'Label39
         '
@@ -674,7 +716,7 @@ Partial Class NewCustomerForm
         Me.txtVTagState.Margin = New System.Windows.Forms.Padding(2)
         Me.txtVTagState.Name = "txtVTagState"
         Me.txtVTagState.Size = New System.Drawing.Size(61, 23)
-        Me.txtVTagState.TabIndex = 6
+        Me.txtVTagState.TabIndex = 1
         '
         'Label46
         '
@@ -725,7 +767,7 @@ Partial Class NewCustomerForm
         Me.txtTrTagNo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTrTagNo.Name = "txtTrTagNo"
         Me.txtTrTagNo.Size = New System.Drawing.Size(118, 23)
-        Me.txtTrTagNo.TabIndex = 6
+        Me.txtTrTagNo.TabIndex = 7
         '
         'Label37
         '
@@ -746,7 +788,7 @@ Partial Class NewCustomerForm
         Me.txtVTagNo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtVTagNo.Name = "txtVTagNo"
         Me.txtVTagNo.Size = New System.Drawing.Size(118, 23)
-        Me.txtVTagNo.TabIndex = 6
+        Me.txtVTagNo.TabIndex = 0
         '
         'Label42
         '
@@ -891,9 +933,9 @@ Partial Class NewCustomerForm
         '
         'grpEmployer
         '
+        Me.grpEmployer.Controls.Add(Me.txtEmpTelephone)
         Me.grpEmployer.Controls.Add(Me.Label26)
         Me.grpEmployer.Controls.Add(Me.txtEmpName)
-        Me.grpEmployer.Controls.Add(Me.txtEmpTelephone)
         Me.grpEmployer.Controls.Add(Me.Label32)
         Me.grpEmployer.Controls.Add(Me.txtEmpAddress1)
         Me.grpEmployer.Controls.Add(Me.Label31)
@@ -910,9 +952,18 @@ Partial Class NewCustomerForm
         Me.grpEmployer.Name = "grpEmployer"
         Me.grpEmployer.Padding = New System.Windows.Forms.Padding(2)
         Me.grpEmployer.Size = New System.Drawing.Size(367, 241)
-        Me.grpEmployer.TabIndex = 9
+        Me.grpEmployer.TabIndex = 3
         Me.grpEmployer.TabStop = False
         Me.grpEmployer.Text = "Employer Info"
+        '
+        'txtEmpTelephone
+        '
+        Me.txtEmpTelephone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmpTelephone.Location = New System.Drawing.Point(12, 199)
+        Me.txtEmpTelephone.Mask = "(999) 000-0000"
+        Me.txtEmpTelephone.Name = "txtEmpTelephone"
+        Me.txtEmpTelephone.Size = New System.Drawing.Size(318, 22)
+        Me.txtEmpTelephone.TabIndex = 6
         '
         'Label26
         '
@@ -934,17 +985,6 @@ Partial Class NewCustomerForm
         Me.txtEmpName.Name = "txtEmpName"
         Me.txtEmpName.Size = New System.Drawing.Size(318, 23)
         Me.txtEmpName.TabIndex = 0
-        '
-        'txtEmpTelephone
-        '
-        Me.txtEmpTelephone.BackColor = System.Drawing.SystemColors.Window
-        Me.txtEmpTelephone.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtEmpTelephone.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpTelephone.Location = New System.Drawing.Point(12, 198)
-        Me.txtEmpTelephone.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtEmpTelephone.Name = "txtEmpTelephone"
-        Me.txtEmpTelephone.Size = New System.Drawing.Size(318, 23)
-        Me.txtEmpTelephone.TabIndex = 6
         '
         'Label32
         '
@@ -1149,19 +1189,9 @@ Partial Class NewCustomerForm
         Me.txtCusFName.Size = New System.Drawing.Size(98, 23)
         Me.txtCusFName.TabIndex = 0
         '
-        'txtCusTelephone
-        '
-        Me.txtCusTelephone.BackColor = System.Drawing.SystemColors.Window
-        Me.txtCusTelephone.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCusTelephone.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCusTelephone.Location = New System.Drawing.Point(10, 193)
-        Me.txtCusTelephone.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtCusTelephone.Name = "txtCusTelephone"
-        Me.txtCusTelephone.Size = New System.Drawing.Size(340, 23)
-        Me.txtCusTelephone.TabIndex = 9
-        '
         'grpCustomerInfo
         '
+        Me.grpCustomerInfo.Controls.Add(Me.txtCusTelephone)
         Me.grpCustomerInfo.Controls.Add(Me.Label9)
         Me.grpCustomerInfo.Controls.Add(Me.Label3)
         Me.grpCustomerInfo.Controls.Add(Me.Label2)
@@ -1175,7 +1205,6 @@ Partial Class NewCustomerForm
         Me.grpCustomerInfo.Controls.Add(Me.txtCusZip)
         Me.grpCustomerInfo.Controls.Add(Me.txtCusState)
         Me.grpCustomerInfo.Controls.Add(Me.txtCusCity)
-        Me.grpCustomerInfo.Controls.Add(Me.txtCusTelephone)
         Me.grpCustomerInfo.Controls.Add(Me.txtCusAddress2)
         Me.grpCustomerInfo.Controls.Add(Me.txtCusAddress1)
         Me.grpCustomerInfo.Controls.Add(Me.txtCusSuffixName)
@@ -1186,52 +1215,19 @@ Partial Class NewCustomerForm
         Me.grpCustomerInfo.Margin = New System.Windows.Forms.Padding(2)
         Me.grpCustomerInfo.Name = "grpCustomerInfo"
         Me.grpCustomerInfo.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpCustomerInfo.Size = New System.Drawing.Size(367, 235)
-        Me.grpCustomerInfo.TabIndex = 7
+        Me.grpCustomerInfo.Size = New System.Drawing.Size(367, 237)
+        Me.grpCustomerInfo.TabIndex = 0
         Me.grpCustomerInfo.TabStop = False
         Me.grpCustomerInfo.Text = "Personal Info"
         '
-        'Label19
+        'txtCusTelephone
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(188, 129)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(53, 13)
-        Me.Label19.TabIndex = 10
-        Me.Label19.Text = "Hair Color"
-        '
-        'txtHairColor
-        '
-        Me.txtHairColor.BackColor = System.Drawing.SystemColors.Window
-        Me.txtHairColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtHairColor.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHairColor.Location = New System.Drawing.Point(191, 142)
-        Me.txtHairColor.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtHairColor.Name = "txtHairColor"
-        Me.txtHairColor.Size = New System.Drawing.Size(78, 23)
-        Me.txtHairColor.TabIndex = 10
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(270, 129)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(33, 13)
-        Me.Label20.TabIndex = 10
-        Me.Label20.Text = "Race"
-        '
-        'txtRace
-        '
-        Me.txtRace.BackColor = System.Drawing.SystemColors.Window
-        Me.txtRace.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtRace.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRace.Location = New System.Drawing.Point(273, 142)
-        Me.txtRace.Margin = New System.Windows.Forms.Padding(2)
-        Me.txtRace.Name = "txtRace"
-        Me.txtRace.Size = New System.Drawing.Size(78, 23)
-        Me.txtRace.TabIndex = 10
+        Me.txtCusTelephone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCusTelephone.Location = New System.Drawing.Point(13, 199)
+        Me.txtCusTelephone.Mask = "(999) 000-0000"
+        Me.txtCusTelephone.Name = "txtCusTelephone"
+        Me.txtCusTelephone.Size = New System.Drawing.Size(336, 22)
+        Me.txtCusTelephone.TabIndex = 9
         '
         'NewCustomerForm
         '
@@ -1341,7 +1337,6 @@ Partial Class NewCustomerForm
     Friend WithEvents grpEmployer As GroupBox
     Friend WithEvents Label26 As Label
     Friend WithEvents txtEmpName As TextBox
-    Friend WithEvents txtEmpTelephone As TextBox
     Friend WithEvents Label32 As Label
     Friend WithEvents txtEmpAddress1 As TextBox
     Friend WithEvents Label31 As Label
@@ -1361,10 +1356,11 @@ Partial Class NewCustomerForm
     Friend WithEvents txtCusLName As TextBox
     Friend WithEvents txtCusMI As TextBox
     Friend WithEvents txtCusFName As TextBox
-    Friend WithEvents txtCusTelephone As TextBox
     Friend WithEvents grpCustomerInfo As GroupBox
     Friend WithEvents txtHairColor As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents txtRace As TextBox
     Friend WithEvents Label20 As Label
+    Friend WithEvents txtCusTelephone As MaskedTextBox
+    Friend WithEvents txtEmpTelephone As MaskedTextBox
 End Class

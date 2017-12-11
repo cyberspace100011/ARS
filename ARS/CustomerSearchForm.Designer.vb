@@ -46,28 +46,14 @@ Partial Class CustomerSearchForm
         Me.BSCustomer = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnSearch = New System.Windows.Forms.ToolStripButton()
         Me.dg1 = New System.Windows.Forms.DataGridView()
-        Me.tsLabels = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripTextBox2 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripTextBox3 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripTextBox4 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripTextBox5 = New System.Windows.Forms.ToolStripLabel()
-        Me.ToolStripSeparator12 = New System.Windows.Forms.ToolStripSeparator()
         Me.tsCustomerSearch = New System.Windows.Forms.ToolStrip()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.txtCusID = New System.Windows.Forms.ToolStripTextBox()
-        Me.txtDL = New System.Windows.Forms.ToolStripTextBox()
-        Me.txtCompany = New System.Windows.Forms.ToolStripTextBox()
-        Me.txtFName = New System.Windows.Forms.ToolStripTextBox()
-        Me.txtLName = New System.Windows.Forms.ToolStripTextBox()
+        Me.cboFieldName = New System.Windows.Forms.ToolStripComboBox()
+        Me.cboSearchType = New System.Windows.Forms.ToolStripComboBox()
+        Me.txtSearch1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.txtSearch2 = New System.Windows.Forms.ToolStripTextBox()
         CType(Me.BSCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.tsLabels.SuspendLayout()
         Me.tsCustomerSearch.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -216,98 +202,22 @@ Partial Class CustomerSearchForm
         Me.dg1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dg1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dg1.Location = New System.Drawing.Point(0, 52)
+        Me.dg1.Location = New System.Drawing.Point(0, 27)
         Me.dg1.Margin = New System.Windows.Forms.Padding(2)
         Me.dg1.MultiSelect = False
         Me.dg1.Name = "dg1"
         Me.dg1.ReadOnly = True
         Me.dg1.RowTemplate.Height = 24
         Me.dg1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dg1.Size = New System.Drawing.Size(1054, 615)
+        Me.dg1.Size = New System.Drawing.Size(1054, 640)
         Me.dg1.TabIndex = 5
         Me.dg1.Visible = False
-        '
-        'tsLabels
-        '
-        Me.tsLabels.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.tsLabels.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.tsLabels.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator1, Me.ToolStripTextBox1, Me.ToolStripSeparator8, Me.ToolStripTextBox2, Me.ToolStripSeparator9, Me.ToolStripTextBox3, Me.ToolStripSeparator10, Me.ToolStripTextBox4, Me.ToolStripSeparator11, Me.ToolStripTextBox5, Me.ToolStripSeparator12})
-        Me.tsLabels.Location = New System.Drawing.Point(0, 27)
-        Me.tsLabels.Name = "tsLabels"
-        Me.tsLabels.Size = New System.Drawing.Size(1054, 25)
-        Me.tsLabels.TabIndex = 3
-        Me.tsLabels.Text = "ToolStrip1"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripTextBox1
-        '
-        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
-        Me.ToolStripTextBox1.Size = New System.Drawing.Size(79, 22)
-        Me.ToolStripTextBox1.Text = "Customer ID  "
-        Me.ToolStripTextBox1.ToolTipText = "Customer ID Number"
-        '
-        'ToolStripSeparator8
-        '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripTextBox2
-        '
-        Me.ToolStripTextBox2.Name = "ToolStripTextBox2"
-        Me.ToolStripTextBox2.Size = New System.Drawing.Size(74, 22)
-        Me.ToolStripTextBox2.Text = "Drivers Lic # "
-        Me.ToolStripTextBox2.ToolTipText = "Drivers Lic Number"
-        '
-        'ToolStripSeparator9
-        '
-        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
-        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripTextBox3
-        '
-        Me.ToolStripTextBox3.Name = "ToolStripTextBox3"
-        Me.ToolStripTextBox3.Size = New System.Drawing.Size(82, 22)
-        Me.ToolStripTextBox3.Text = "Company Nm"
-        Me.ToolStripTextBox3.ToolTipText = "Company Name"
-        '
-        'ToolStripSeparator10
-        '
-        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
-        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripTextBox4
-        '
-        Me.ToolStripTextBox4.Name = "ToolStripTextBox4"
-        Me.ToolStripTextBox4.Size = New System.Drawing.Size(76, 22)
-        Me.ToolStripTextBox4.Text = "First Name    "
-        Me.ToolStripTextBox4.ToolTipText = "First Name"
-        '
-        'ToolStripSeparator11
-        '
-        Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
-        Me.ToolStripSeparator11.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripTextBox5
-        '
-        Me.ToolStripTextBox5.Name = "ToolStripTextBox5"
-        Me.ToolStripTextBox5.Size = New System.Drawing.Size(75, 22)
-        Me.ToolStripTextBox5.Text = "Last Name    "
-        Me.ToolStripTextBox5.ToolTipText = "Last Name"
-        '
-        'ToolStripSeparator12
-        '
-        Me.ToolStripSeparator12.Name = "ToolStripSeparator12"
-        Me.ToolStripSeparator12.Size = New System.Drawing.Size(6, 25)
         '
         'tsCustomerSearch
         '
         Me.tsCustomerSearch.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.tsCustomerSearch.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.tsCustomerSearch.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator4, Me.txtCusID, Me.txtDL, Me.txtCompany, Me.txtFName, Me.txtLName, Me.btnSearch, Me.btnClear, Me.ToolStripSeparator5, Me.ToolStripSeparator6, Me.btnAddCustomer, Me.ToolStripSeparator7, Me.btnScanID, Me.btnBarcodeOptions})
+        Me.tsCustomerSearch.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator4, Me.cboFieldName, Me.cboSearchType, Me.txtSearch1, Me.txtSearch2, Me.btnSearch, Me.btnClear, Me.ToolStripSeparator5, Me.ToolStripSeparator6, Me.btnAddCustomer, Me.ToolStripSeparator7, Me.btnScanID, Me.btnBarcodeOptions})
         Me.tsCustomerSearch.Location = New System.Drawing.Point(0, 0)
         Me.tsCustomerSearch.Name = "tsCustomerSearch"
         Me.tsCustomerSearch.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
@@ -320,45 +230,35 @@ Partial Class CustomerSearchForm
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 27)
         '
-        'txtCusID
+        'cboFieldName
         '
-        Me.txtCusID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCusID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCusID.Name = "txtCusID"
-        Me.txtCusID.Size = New System.Drawing.Size(76, 27)
-        Me.txtCusID.ToolTipText = "Customer ID Number"
+        Me.cboFieldName.Items.AddRange(New Object() {"Customer ID Number", "Drivers Lic / ID Number", "Company Name", "First Name", "Last Name", "First -Last Name"})
+        Me.cboFieldName.Name = "cboFieldName"
+        Me.cboFieldName.Size = New System.Drawing.Size(150, 27)
+        Me.cboFieldName.ToolTipText = "Customer ID Number"
         '
-        'txtDL
+        'cboSearchType
         '
-        Me.txtDL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDL.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtDL.Name = "txtDL"
-        Me.txtDL.Size = New System.Drawing.Size(76, 27)
-        Me.txtDL.ToolTipText = "Drivers Lic Number"
+        Me.cboSearchType.Items.AddRange(New Object() {"Exact Match", "Field Starts With", "Field Contains"})
+        Me.cboSearchType.Name = "cboSearchType"
+        Me.cboSearchType.Size = New System.Drawing.Size(150, 27)
+        Me.cboSearchType.ToolTipText = "Drivers Lic Number"
         '
-        'txtCompany
+        'txtSearch1
         '
-        Me.txtCompany.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCompany.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCompany.Name = "txtCompany"
-        Me.txtCompany.Size = New System.Drawing.Size(76, 27)
-        Me.txtCompany.ToolTipText = "Company Name"
+        Me.txtSearch1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSearch1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtSearch1.Name = "txtSearch1"
+        Me.txtSearch1.Size = New System.Drawing.Size(76, 27)
+        Me.txtSearch1.ToolTipText = "Company Name"
         '
-        'txtFName
+        'txtSearch2
         '
-        Me.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtFName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtFName.Name = "txtFName"
-        Me.txtFName.Size = New System.Drawing.Size(76, 27)
-        Me.txtFName.ToolTipText = "First Name"
-        '
-        'txtLName
-        '
-        Me.txtLName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtLName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtLName.Name = "txtLName"
-        Me.txtLName.Size = New System.Drawing.Size(76, 27)
-        Me.txtLName.ToolTipText = "Last Name"
+        Me.txtSearch2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtSearch2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtSearch2.Name = "txtSearch2"
+        Me.txtSearch2.Size = New System.Drawing.Size(76, 27)
+        Me.txtSearch2.ToolTipText = "First Name"
         '
         'CustomerSearchForm
         '
@@ -366,14 +266,11 @@ Partial Class CustomerSearchForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1054, 667)
         Me.Controls.Add(Me.dg1)
-        Me.Controls.Add(Me.tsLabels)
         Me.Controls.Add(Me.tsCustomerSearch)
         Me.Name = "CustomerSearchForm"
-        Me.Text = "CustomerSearchForm"
+        Me.Text = "Customer Search"
         CType(Me.BSCustomer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.tsLabels.ResumeLayout(False)
-        Me.tsLabels.PerformLayout()
         Me.tsCustomerSearch.ResumeLayout(False)
         Me.tsCustomerSearch.PerformLayout()
         Me.ResumeLayout(False)
@@ -403,23 +300,10 @@ Partial Class CustomerSearchForm
     Friend WithEvents BSCustomer As BindingSource
     Friend WithEvents btnSearch As ToolStripButton
     Protected Friend WithEvents dg1 As DataGridView
-    Friend WithEvents tsLabels As ToolStrip
-    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
-    Friend WithEvents ToolStripTextBox1 As ToolStripLabel
-    Friend WithEvents ToolStripSeparator8 As ToolStripSeparator
-    Friend WithEvents ToolStripTextBox2 As ToolStripLabel
-    Friend WithEvents ToolStripSeparator9 As ToolStripSeparator
-    Friend WithEvents ToolStripTextBox3 As ToolStripLabel
-    Friend WithEvents ToolStripSeparator10 As ToolStripSeparator
-    Friend WithEvents ToolStripTextBox4 As ToolStripLabel
-    Friend WithEvents ToolStripSeparator11 As ToolStripSeparator
-    Friend WithEvents ToolStripTextBox5 As ToolStripLabel
-    Friend WithEvents ToolStripSeparator12 As ToolStripSeparator
     Friend WithEvents tsCustomerSearch As ToolStrip
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents txtCusID As ToolStripTextBox
-    Friend WithEvents txtDL As ToolStripTextBox
-    Friend WithEvents txtCompany As ToolStripTextBox
-    Friend WithEvents txtFName As ToolStripTextBox
-    Friend WithEvents txtLName As ToolStripTextBox
+    Friend WithEvents txtSearch1 As ToolStripTextBox
+    Friend WithEvents txtSearch2 As ToolStripTextBox
+    Friend WithEvents cboFieldName As ToolStripComboBox
+    Friend WithEvents cboSearchType As ToolStripComboBox
 End Class

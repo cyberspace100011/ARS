@@ -75,20 +75,60 @@
     End Sub
 
     Private Sub btnCustomersNew_Click(sender As Object, e As EventArgs) Handles btnCustomersNew.Click
+        ' btnCustomersNew.HideDropDown()
+        btnCustomers.HideDropDown()
 
+        Dim nc As New NewCustomerForm
+        With nc
+            .MdiParent = Me
+            .WindowState = FormWindowState.Maximized
+            .Show()
+
+        End With
     End Sub
 
-    Private Sub btnScanID_Click(sender As Object, e As EventArgs) Handles btnScanID.Click
-        Dim scanid As New BarcodeScannerForm
-        With scanid
-            .MdiParent = Me
-            .ScannedFromMain = True
-            .Show()
-        End With
+    Private Sub btnScanID_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub tsHome_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles tsHome.ItemClicked
 
+    End Sub
+
+    Private Sub btnCustomersManage_Click(sender As Object, e As EventArgs) Handles btnCustomersManage.Click
+        Dim cs As New CustomerSearchForm
+        With cs
+            .MdiParent = Me
+            .WindowState = FormWindowState.Maximized
+            .Show()
+
+        End With
+    End Sub
+
+    Private Sub ScanCustomerIDToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ScanCustomerIDToolStripMenuItem1.Click
+        Dim scanid As New BarcodeScannerForm
+        With scanid
+            .MdiParent = Me
+            .ScannedFromMain = False
+            .CustomerScan = True
+            .TicketScan = False
+            .Show()
+        End With
+    End Sub
+
+    Private Sub btnTicketsNew_Click(sender As Object, e As EventArgs) Handles btnTicketsNew.Click
+
+    End Sub
+
+    Private Sub ScanCustomerIDToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ScanCustomerIDToolStripMenuItem.Click
+        Dim scanid As New BarcodeScannerForm
+        With scanid
+            .MdiParent = Me
+            .ScannedFromMain = False
+            .CustomerScan = False
+            .TicketScan = True
+            .Show()
+        End With
     End Sub
 
 
