@@ -37,4 +37,12 @@
     Private Sub btnScanID_Click(sender As Object, e As EventArgs) Handles btnScanID.Click
 
     End Sub
+
+    Private Sub cboFieldName_KeyDown(sender As Object, e As KeyEventArgs) Handles txtSearchField.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            'MessageBox.Show(txtSearchField.Text)
+            Call btnSearch_Click(sender, e)
+
+        End If
+    End Sub
 End Class

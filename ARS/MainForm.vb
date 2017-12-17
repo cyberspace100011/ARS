@@ -96,6 +96,8 @@
     End Sub
 
     Private Sub btnCustomersManage_Click(sender As Object, e As EventArgs) Handles btnCustomersManage.Click
+        btnCustomers.HideDropDown()
+
         Dim cs As New CustomerSearchForm
         With cs
             .MdiParent = Me
@@ -129,6 +131,10 @@
             .TicketScan = True
             .Show()
         End With
+    End Sub
+
+    Private Sub ScanCustomerIDToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ScanCustomerIDToolStripMenuItem2.Click
+
     End Sub
 
 

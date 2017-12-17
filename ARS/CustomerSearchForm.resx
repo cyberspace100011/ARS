@@ -117,61 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="OleDbCustomers.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
-  </metadata>
-  <metadata name="OleDbDeleteCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="OleDbDeleteCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="OleDbDeleteCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="OleDbDeleteCommand1.CommandText" xml:space="preserve">
-    <value>DELETE FROM `customer` WHERE ((`cust_id` = ?) AND ((? = 1 AND `cust_nm_last` IS NULL) OR (`cust_nm_last` = ?)) AND ((? = 1 AND `cust_nm_first` IS NULL) OR (`cust_nm_first` = ?)) AND ((? = 1 AND `cust_nm_middle` IS NULL) OR (`cust_nm_middle` = ?)) AND ((? = 1 AND `cust_addr1` IS NULL) OR (`cust_addr1` = ?)) AND ((? = 1 AND `cust_addr2` IS NULL) OR (`cust_addr2` = ?)) AND ((? = 1 AND `cust_city` IS NULL) OR (`cust_city` = ?)) AND ((? = 1 AND `cust_state` IS NULL) OR (`cust_state` = ?)) AND ((? = 1 AND `cust_zip` IS NULL) OR (`cust_zip` = ?)) AND ((? = 1 AND `cust_id_number` IS NULL) OR (`cust_id_number` = ?)) AND ((? = 1 AND `employer_nm` IS NULL) OR (`employer_nm` = ?)))</value>
-  </data>
-  <metadata name="OleDbConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>487, 17</value>
-  </metadata>
-  <metadata name="OleDbInsertCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="OleDbInsertCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="OleDbInsertCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="OleDbInsertCommand1.CommandText" xml:space="preserve">
-    <value>INSERT INTO `customer` (`cust_id`, `cust_nm_last`, `cust_nm_first`, `cust_nm_middle`, `cust_addr1`, `cust_addr2`, `cust_city`, `cust_state`, `cust_zip`, `cust_id_number`, `employer_nm`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</value>
-  </data>
-  <metadata name="OleDbSelectCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="OleDbSelectCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="OleDbSelectCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="OleDbUpdateCommand1.DesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="OleDbUpdateCommand1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="OleDbUpdateCommand1.CommandDesignTimeVisible" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="OleDbUpdateCommand1.CommandText" xml:space="preserve">
-    <value>UPDATE `customer` SET `cust_id` = ?, `cust_nm_last` = ?, `cust_nm_first` = ?, `cust_nm_middle` = ?, `cust_addr1` = ?, `cust_addr2` = ?, `cust_city` = ?, `cust_state` = ?, `cust_zip` = ?, `cust_id_number` = ?, `employer_nm` = ? WHERE ((`cust_id` = ?) AND ((? = 1 AND `cust_nm_last` IS NULL) OR (`cust_nm_last` = ?)) AND ((? = 1 AND `cust_nm_first` IS NULL) OR (`cust_nm_first` = ?)) AND ((? = 1 AND `cust_nm_middle` IS NULL) OR (`cust_nm_middle` = ?)) AND ((? = 1 AND `cust_addr1` IS NULL) OR (`cust_addr1` = ?)) AND ((? = 1 AND `cust_addr2` IS NULL) OR (`cust_addr2` = ?)) AND ((? = 1 AND `cust_city` IS NULL) OR (`cust_city` = ?)) AND ((? = 1 AND `cust_state` IS NULL) OR (`cust_state` = ?)) AND ((? = 1 AND `cust_zip` IS NULL) OR (`cust_zip` = ?)) AND ((? = 1 AND `cust_id_number` IS NULL) OR (`cust_id_number` = ?)) AND ((? = 1 AND `employer_nm` IS NULL) OR (`employer_nm` = ?)))</value>
-  </data>
-  <metadata name="BSCustomer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>867, 17</value>
-  </metadata>
   <metadata name="tsCustomerSearch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 17</value>
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="ToolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>164, 16</value>
   </metadata>
 </root>

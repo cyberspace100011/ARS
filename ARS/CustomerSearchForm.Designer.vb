@@ -23,13 +23,6 @@ Partial Class CustomerSearchForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CustomerSearchForm))
-        Me.OleDbCustomers = New System.Data.OleDb.OleDbDataAdapter()
-        Me.OleDbDeleteCommand1 = New System.Data.OleDb.OleDbCommand()
-        Me.OleDbConnection1 = New System.Data.OleDb.OleDbConnection()
-        Me.OleDbInsertCommand1 = New System.Data.OleDb.OleDbCommand()
-        Me.OleDbSelectCommand1 = New System.Data.OleDb.OleDbCommand()
-        Me.OleDbUpdateCommand1 = New System.Data.OleDb.OleDbCommand()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnAddCustomer = New System.Windows.Forms.ToolStripDropDownButton()
@@ -43,56 +36,15 @@ Partial Class CustomerSearchForm
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.CreateANewCustomerUsingScanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnClear = New System.Windows.Forms.ToolStripButton()
-        Me.BSCustomer = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnSearch = New System.Windows.Forms.ToolStripButton()
         Me.dg1 = New System.Windows.Forms.DataGridView()
         Me.tsCustomerSearch = New System.Windows.Forms.ToolStrip()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.cboFieldName = New System.Windows.Forms.ToolStripComboBox()
-        Me.cboSearchType = New System.Windows.Forms.ToolStripComboBox()
-        Me.txtSearch1 = New System.Windows.Forms.ToolStripTextBox()
-        Me.txtSearch2 = New System.Windows.Forms.ToolStripTextBox()
-        CType(Me.BSCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.txtSearchField = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tsCustomerSearch.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'OleDbCustomers
-        '
-        Me.OleDbCustomers.DeleteCommand = Me.OleDbDeleteCommand1
-        Me.OleDbCustomers.InsertCommand = Me.OleDbInsertCommand1
-        Me.OleDbCustomers.SelectCommand = Me.OleDbSelectCommand1
-        Me.OleDbCustomers.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "customer", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("cust_id", "cust_id"), New System.Data.Common.DataColumnMapping("cust_nm_last", "cust_nm_last"), New System.Data.Common.DataColumnMapping("cust_nm_first", "cust_nm_first"), New System.Data.Common.DataColumnMapping("cust_nm_middle", "cust_nm_middle"), New System.Data.Common.DataColumnMapping("cust_addr1", "cust_addr1"), New System.Data.Common.DataColumnMapping("cust_addr2", "cust_addr2"), New System.Data.Common.DataColumnMapping("cust_city", "cust_city"), New System.Data.Common.DataColumnMapping("cust_state", "cust_state"), New System.Data.Common.DataColumnMapping("cust_zip", "cust_zip"), New System.Data.Common.DataColumnMapping("cust_id_number", "cust_id_number"), New System.Data.Common.DataColumnMapping("employer_nm", "employer_nm")})})
-        Me.OleDbCustomers.UpdateCommand = Me.OleDbUpdateCommand1
-        '
-        'OleDbDeleteCommand1
-        '
-        Me.OleDbDeleteCommand1.CommandText = resources.GetString("OleDbDeleteCommand1.CommandText")
-        Me.OleDbDeleteCommand1.Connection = Me.OleDbConnection1
-        Me.OleDbDeleteCommand1.Parameters.AddRange(New System.Data.OleDb.OleDbParameter() {New System.Data.OleDb.OleDbParameter("Original_cust_id", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_id", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_nm_last", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_nm_last", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_nm_last", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_nm_last", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_nm_first", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_nm_first", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_nm_first", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_nm_first", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_nm_middle", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_nm_middle", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_nm_middle", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_nm_middle", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_addr1", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_addr1", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_addr1", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_addr1", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_addr2", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_addr2", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_addr2", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_addr2", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_city", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_city", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_city", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_city", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_state", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_state", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_state", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_state", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_zip", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_zip", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_zip", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_zip", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_id_number", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_id_number", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_id_number", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_id_number", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_employer_nm", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "employer_nm", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_employer_nm", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "employer_nm", System.Data.DataRowVersion.Original, Nothing)})
-        '
-        'OleDbConnection1
-        '
-        Me.OleDbConnection1.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Z:\DataNest\DB\ARS.mdb"
-        '
-        'OleDbInsertCommand1
-        '
-        Me.OleDbInsertCommand1.CommandText = resources.GetString("OleDbInsertCommand1.CommandText")
-        Me.OleDbInsertCommand1.Connection = Me.OleDbConnection1
-        Me.OleDbInsertCommand1.Parameters.AddRange(New System.Data.OleDb.OleDbParameter() {New System.Data.OleDb.OleDbParameter("cust_id", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_id"), New System.Data.OleDb.OleDbParameter("cust_nm_last", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_nm_last"), New System.Data.OleDb.OleDbParameter("cust_nm_first", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_nm_first"), New System.Data.OleDb.OleDbParameter("cust_nm_middle", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_nm_middle"), New System.Data.OleDb.OleDbParameter("cust_addr1", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_addr1"), New System.Data.OleDb.OleDbParameter("cust_addr2", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_addr2"), New System.Data.OleDb.OleDbParameter("cust_city", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_city"), New System.Data.OleDb.OleDbParameter("cust_state", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_state"), New System.Data.OleDb.OleDbParameter("cust_zip", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_zip"), New System.Data.OleDb.OleDbParameter("cust_id_number", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_id_number"), New System.Data.OleDb.OleDbParameter("employer_nm", System.Data.OleDb.OleDbType.VarWChar, 0, "employer_nm")})
-        '
-        'OleDbSelectCommand1
-        '
-        Me.OleDbSelectCommand1.CommandText = "SELECT cust_id, cust_nm_last, cust_nm_first, cust_nm_middle, cust_addr1, cust_add" &
-    "r2, cust_city, cust_state, cust_zip, cust_id_number, employer_nm" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM     custo" &
-    "mer"
-        Me.OleDbSelectCommand1.Connection = Me.OleDbConnection1
-        '
-        'OleDbUpdateCommand1
-        '
-        Me.OleDbUpdateCommand1.CommandText = resources.GetString("OleDbUpdateCommand1.CommandText")
-        Me.OleDbUpdateCommand1.Connection = Me.OleDbConnection1
-        Me.OleDbUpdateCommand1.Parameters.AddRange(New System.Data.OleDb.OleDbParameter() {New System.Data.OleDb.OleDbParameter("cust_id", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_id"), New System.Data.OleDb.OleDbParameter("cust_nm_last", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_nm_last"), New System.Data.OleDb.OleDbParameter("cust_nm_first", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_nm_first"), New System.Data.OleDb.OleDbParameter("cust_nm_middle", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_nm_middle"), New System.Data.OleDb.OleDbParameter("cust_addr1", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_addr1"), New System.Data.OleDb.OleDbParameter("cust_addr2", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_addr2"), New System.Data.OleDb.OleDbParameter("cust_city", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_city"), New System.Data.OleDb.OleDbParameter("cust_state", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_state"), New System.Data.OleDb.OleDbParameter("cust_zip", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_zip"), New System.Data.OleDb.OleDbParameter("cust_id_number", System.Data.OleDb.OleDbType.VarWChar, 0, "cust_id_number"), New System.Data.OleDb.OleDbParameter("employer_nm", System.Data.OleDb.OleDbType.VarWChar, 0, "employer_nm"), New System.Data.OleDb.OleDbParameter("Original_cust_id", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_id", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_nm_last", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_nm_last", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_nm_last", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_nm_last", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_nm_first", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_nm_first", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_nm_first", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_nm_first", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_nm_middle", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_nm_middle", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_nm_middle", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_nm_middle", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_addr1", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_addr1", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_addr1", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_addr1", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_addr2", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_addr2", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_addr2", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_addr2", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_city", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_city", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_city", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_city", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_state", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_state", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_state", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_state", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_zip", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_zip", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_zip", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_zip", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_cust_id_number", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "cust_id_number", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_cust_id_number", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "cust_id_number", System.Data.DataRowVersion.Original, Nothing), New System.Data.OleDb.OleDbParameter("IsNull_employer_nm", System.Data.OleDb.OleDbType.[Integer], 0, System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "employer_nm", System.Data.DataRowVersion.Original, True, Nothing), New System.Data.OleDb.OleDbParameter("Original_employer_nm", System.Data.OleDb.OleDbType.VarWChar, 0, System.Data.ParameterDirection.Input, False, CType(0, Byte), CType(0, Byte), "employer_nm", System.Data.DataRowVersion.Original, Nothing)})
         '
         'ToolStripSeparator5
         '
@@ -180,10 +132,6 @@ Partial Class CustomerSearchForm
         Me.btnClear.Size = New System.Drawing.Size(58, 24)
         Me.btnClear.Text = "Clear"
         '
-        'BSCustomer
-        '
-        Me.BSCustomer.DataMember = "customer"
-        '
         'btnSearch
         '
         Me.btnSearch.Image = Global.ARS.My.Resources.Resources.search
@@ -217,7 +165,7 @@ Partial Class CustomerSearchForm
         '
         Me.tsCustomerSearch.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.tsCustomerSearch.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.tsCustomerSearch.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator4, Me.cboFieldName, Me.cboSearchType, Me.txtSearch1, Me.txtSearch2, Me.btnSearch, Me.btnClear, Me.ToolStripSeparator5, Me.ToolStripSeparator6, Me.btnAddCustomer, Me.ToolStripSeparator7, Me.btnScanID, Me.btnBarcodeOptions})
+        Me.tsCustomerSearch.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator4, Me.txtSearchField, Me.btnSearch, Me.btnClear, Me.ToolStripSeparator5, Me.ToolStripSeparator6, Me.btnAddCustomer, Me.ToolStripSeparator7, Me.btnScanID, Me.btnBarcodeOptions})
         Me.tsCustomerSearch.Location = New System.Drawing.Point(0, 0)
         Me.tsCustomerSearch.Name = "tsCustomerSearch"
         Me.tsCustomerSearch.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
@@ -230,35 +178,12 @@ Partial Class CustomerSearchForm
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 27)
         '
-        'cboFieldName
+        'txtSearchField
         '
-        Me.cboFieldName.Items.AddRange(New Object() {"Customer ID Number", "Drivers Lic / ID Number", "Company Name", "First Name", "Last Name", "First -Last Name"})
-        Me.cboFieldName.Name = "cboFieldName"
-        Me.cboFieldName.Size = New System.Drawing.Size(150, 27)
-        Me.cboFieldName.ToolTipText = "Customer ID Number"
-        '
-        'cboSearchType
-        '
-        Me.cboSearchType.Items.AddRange(New Object() {"Exact Match", "Field Starts With", "Field Contains"})
-        Me.cboSearchType.Name = "cboSearchType"
-        Me.cboSearchType.Size = New System.Drawing.Size(150, 27)
-        Me.cboSearchType.ToolTipText = "Drivers Lic Number"
-        '
-        'txtSearch1
-        '
-        Me.txtSearch1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSearch1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtSearch1.Name = "txtSearch1"
-        Me.txtSearch1.Size = New System.Drawing.Size(76, 27)
-        Me.txtSearch1.ToolTipText = "Company Name"
-        '
-        'txtSearch2
-        '
-        Me.txtSearch2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtSearch2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtSearch2.Name = "txtSearch2"
-        Me.txtSearch2.Size = New System.Drawing.Size(76, 27)
-        Me.txtSearch2.ToolTipText = "First Name"
+        Me.txtSearchField.Name = "txtSearchField"
+        Me.txtSearchField.Size = New System.Drawing.Size(300, 27)
+        Me.txtSearchField.ToolTipText = "Input customers first and /or last name," & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "or Drivers License ID Number and then p" &
+    "ress enter"
         '
         'CustomerSearchForm
         '
@@ -269,7 +194,6 @@ Partial Class CustomerSearchForm
         Me.Controls.Add(Me.tsCustomerSearch)
         Me.Name = "CustomerSearchForm"
         Me.Text = "Customer Search"
-        CType(Me.BSCustomer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dg1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.tsCustomerSearch.ResumeLayout(False)
         Me.tsCustomerSearch.PerformLayout()
@@ -277,13 +201,6 @@ Partial Class CustomerSearchForm
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents OleDbCustomers As OleDb.OleDbDataAdapter
-    Friend WithEvents OleDbDeleteCommand1 As OleDb.OleDbCommand
-    Friend WithEvents OleDbConnection1 As OleDb.OleDbConnection
-    Friend WithEvents OleDbInsertCommand1 As OleDb.OleDbCommand
-    Friend WithEvents OleDbSelectCommand1 As OleDb.OleDbCommand
-    Friend WithEvents OleDbUpdateCommand1 As OleDb.OleDbCommand
     Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
     Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
     Friend WithEvents btnAddCustomer As ToolStripDropDownButton
@@ -297,13 +214,10 @@ Partial Class CustomerSearchForm
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents CreateANewCustomerUsingScanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnClear As ToolStripButton
-    Friend WithEvents BSCustomer As BindingSource
     Friend WithEvents btnSearch As ToolStripButton
     Protected Friend WithEvents dg1 As DataGridView
     Friend WithEvents tsCustomerSearch As ToolStrip
     Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
-    Friend WithEvents txtSearch1 As ToolStripTextBox
-    Friend WithEvents txtSearch2 As ToolStripTextBox
-    Friend WithEvents cboFieldName As ToolStripComboBox
-    Friend WithEvents cboSearchType As ToolStripComboBox
+    Friend WithEvents txtSearchField As ToolStripTextBox
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

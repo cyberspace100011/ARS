@@ -947,11 +947,11 @@ Partial Class NewCustomerForm
         Me.grpEmployer.Controls.Add(Me.Label28)
         Me.grpEmployer.Controls.Add(Me.txtEmpZip)
         Me.grpEmployer.Controls.Add(Me.Label27)
-        Me.grpEmployer.Location = New System.Drawing.Point(11, 279)
+        Me.grpEmployer.Location = New System.Drawing.Point(11, 287)
         Me.grpEmployer.Margin = New System.Windows.Forms.Padding(2)
         Me.grpEmployer.Name = "grpEmployer"
         Me.grpEmployer.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpEmployer.Size = New System.Drawing.Size(367, 241)
+        Me.grpEmployer.Size = New System.Drawing.Size(367, 233)
         Me.grpEmployer.TabIndex = 3
         Me.grpEmployer.TabStop = False
         Me.grpEmployer.Text = "Employer Info"
@@ -959,7 +959,7 @@ Partial Class NewCustomerForm
         'txtEmpTelephone
         '
         Me.txtEmpTelephone.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpTelephone.Location = New System.Drawing.Point(12, 199)
+        Me.txtEmpTelephone.Location = New System.Drawing.Point(13, 201)
         Me.txtEmpTelephone.Mask = "(999) 000-0000"
         Me.txtEmpTelephone.Name = "txtEmpTelephone"
         Me.txtEmpTelephone.Size = New System.Drawing.Size(318, 22)
@@ -968,7 +968,7 @@ Partial Class NewCustomerForm
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(10, 25)
+        Me.Label26.Location = New System.Drawing.Point(11, 27)
         Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(82, 13)
@@ -980,7 +980,7 @@ Partial Class NewCustomerForm
         Me.txtEmpName.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmpName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEmpName.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpName.Location = New System.Drawing.Point(10, 40)
+        Me.txtEmpName.Location = New System.Drawing.Point(11, 42)
         Me.txtEmpName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmpName.Name = "txtEmpName"
         Me.txtEmpName.Size = New System.Drawing.Size(318, 23)
@@ -989,7 +989,7 @@ Partial Class NewCustomerForm
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(221, 144)
+        Me.Label32.Location = New System.Drawing.Point(222, 146)
         Me.Label32.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(22, 13)
@@ -1001,7 +1001,7 @@ Partial Class NewCustomerForm
         Me.txtEmpAddress1.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmpAddress1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEmpAddress1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpAddress1.Location = New System.Drawing.Point(12, 80)
+        Me.txtEmpAddress1.Location = New System.Drawing.Point(13, 82)
         Me.txtEmpAddress1.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmpAddress1.Name = "txtEmpAddress1"
         Me.txtEmpAddress1.Size = New System.Drawing.Size(318, 23)
@@ -1010,7 +1010,7 @@ Partial Class NewCustomerForm
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(118, 144)
+        Me.Label31.Location = New System.Drawing.Point(119, 146)
         Me.Label31.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(32, 13)
@@ -1022,7 +1022,7 @@ Partial Class NewCustomerForm
         Me.txtEmpAddress2.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmpAddress2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEmpAddress2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpAddress2.Location = New System.Drawing.Point(12, 120)
+        Me.txtEmpAddress2.Location = New System.Drawing.Point(13, 122)
         Me.txtEmpAddress2.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmpAddress2.Name = "txtEmpAddress2"
         Me.txtEmpAddress2.Size = New System.Drawing.Size(318, 23)
@@ -1031,7 +1031,7 @@ Partial Class NewCustomerForm
         'Label30
         '
         Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(10, 183)
+        Me.Label30.Location = New System.Drawing.Point(11, 185)
         Me.Label30.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(58, 13)
@@ -1043,7 +1043,7 @@ Partial Class NewCustomerForm
         Me.txtEmpCity.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmpCity.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEmpCity.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpCity.Location = New System.Drawing.Point(12, 160)
+        Me.txtEmpCity.Location = New System.Drawing.Point(13, 162)
         Me.txtEmpCity.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmpCity.Name = "txtEmpCity"
         Me.txtEmpCity.Size = New System.Drawing.Size(106, 23)
@@ -1052,7 +1052,7 @@ Partial Class NewCustomerForm
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(10, 144)
+        Me.Label29.Location = New System.Drawing.Point(11, 146)
         Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(24, 13)
@@ -1064,7 +1064,7 @@ Partial Class NewCustomerForm
         Me.txtEmpState.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmpState.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEmpState.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpState.Location = New System.Drawing.Point(118, 160)
+        Me.txtEmpState.Location = New System.Drawing.Point(119, 162)
         Me.txtEmpState.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmpState.Name = "txtEmpState"
         Me.txtEmpState.Size = New System.Drawing.Size(106, 23)
@@ -1073,7 +1073,7 @@ Partial Class NewCustomerForm
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(10, 104)
+        Me.Label28.Location = New System.Drawing.Point(11, 106)
         Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(77, 13)
@@ -1085,7 +1085,7 @@ Partial Class NewCustomerForm
         Me.txtEmpZip.BackColor = System.Drawing.SystemColors.Window
         Me.txtEmpZip.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEmpZip.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpZip.Location = New System.Drawing.Point(223, 160)
+        Me.txtEmpZip.Location = New System.Drawing.Point(224, 162)
         Me.txtEmpZip.Margin = New System.Windows.Forms.Padding(2)
         Me.txtEmpZip.Name = "txtEmpZip"
         Me.txtEmpZip.Size = New System.Drawing.Size(106, 23)
@@ -1094,7 +1094,7 @@ Partial Class NewCustomerForm
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(10, 64)
+        Me.Label27.Location = New System.Drawing.Point(11, 66)
         Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(77, 13)
@@ -1234,11 +1234,11 @@ Partial Class NewCustomerForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1215, 916)
+        Me.Controls.Add(Me.grpEmployer)
         Me.Controls.Add(Me.grpCusIDinfo)
         Me.Controls.Add(Me.grpImages)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.grpTransport)
-        Me.Controls.Add(Me.grpEmployer)
         Me.Controls.Add(Me.grpCustomerInfo)
         Me.Name = "NewCustomerForm"
         Me.Text = "New Customer"
