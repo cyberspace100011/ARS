@@ -33,21 +33,28 @@ Partial Class ImageControls
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnClearImage = New System.Windows.Forms.ToolStripButton()
         Me.BGSave = New System.ComponentModel.BackgroundWorker()
+        Me.ToolStrip2 = New System.Windows.Forms.ToolStrip()
+        Me.lblControlLabel = New System.Windows.Forms.ToolStripLabel()
         CType(Me.pb1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        Me.ToolStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'pb1
         '
+        Me.pb1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pb1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.pb1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.pb1.Location = New System.Drawing.Point(2, 27)
+        Me.pb1.Location = New System.Drawing.Point(2, 52)
         Me.pb1.Margin = New System.Windows.Forms.Padding(2)
         Me.pb1.Name = "pb1"
-        Me.pb1.Size = New System.Drawing.Size(234, 180)
+        Me.pb1.Size = New System.Drawing.Size(226, 203)
         Me.pb1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.pb1.TabIndex = 13
         Me.pb1.TabStop = False
+        Me.pb1.WaitOnLoad = True
         '
         'ToolTip1
         '
@@ -56,9 +63,9 @@ Partial Class ImageControls
         'ToolStrip1
         '
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripDropDownButton1, Me.ToolStripSeparator1, Me.btnClearImage})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 25)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(241, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(232, 25)
         Me.ToolStrip1.TabIndex = 15
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -74,21 +81,21 @@ Partial Class ImageControls
         '
         Me.CameraToolStripMenuItem.Image = Global.ARS.My.Resources.Resources.Cam
         Me.CameraToolStripMenuItem.Name = "CameraToolStripMenuItem"
-        Me.CameraToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.CameraToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CameraToolStripMenuItem.Text = "Camera"
         '
         'ScannerToolStripMenuItem
         '
         Me.ScannerToolStripMenuItem.Image = Global.ARS.My.Resources.Resources.Scanner
         Me.ScannerToolStripMenuItem.Name = "ScannerToolStripMenuItem"
-        Me.ScannerToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.ScannerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ScannerToolStripMenuItem.Text = "Scanner"
         '
         'FilesToolStripMenuItem
         '
         Me.FilesToolStripMenuItem.Image = Global.ARS.My.Resources.Resources.FlashDrive
         Me.FilesToolStripMenuItem.Name = "FilesToolStripMenuItem"
-        Me.FilesToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.FilesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FilesToolStripMenuItem.Text = "Files"
         '
         'ToolStripSeparator1
@@ -104,25 +111,45 @@ Partial Class ImageControls
         Me.btnClearImage.Name = "btnClearImage"
         Me.btnClearImage.Size = New System.Drawing.Size(23, 22)
         Me.btnClearImage.Text = "ToolStripButton1"
+        Me.btnClearImage.ToolTipText = "Clear Image"
         '
         'BGSave
         '
         Me.BGSave.WorkerReportsProgress = True
+        '
+        'ToolStrip2
+        '
+        Me.ToolStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblControlLabel})
+        Me.ToolStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip2.Name = "ToolStrip2"
+        Me.ToolStrip2.Size = New System.Drawing.Size(232, 25)
+        Me.ToolStrip2.TabIndex = 16
+        Me.ToolStrip2.Text = "ToolStrip2"
+        '
+        'lblControlLabel
+        '
+        Me.lblControlLabel.Font = New System.Drawing.Font("Times New Roman", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblControlLabel.Name = "lblControlLabel"
+        Me.lblControlLabel.Size = New System.Drawing.Size(106, 22)
+        Me.lblControlLabel.Text = "Control Label Text"
         '
         'ImageControls
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.ToolStrip2)
         Me.Controls.Add(Me.pb1)
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "ImageControls"
-        Me.Size = New System.Drawing.Size(241, 210)
+        Me.Size = New System.Drawing.Size(232, 258)
         CType(Me.pb1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.ToolStrip2.ResumeLayout(False)
+        Me.ToolStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -137,4 +164,6 @@ Partial Class ImageControls
     Friend WithEvents btnClearImage As ToolStripButton
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents BGSave As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ToolStrip2 As ToolStrip
+    Friend WithEvents lblControlLabel As ToolStripLabel
 End Class

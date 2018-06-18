@@ -335,13 +335,14 @@
         End With
 
     End Sub
-    Public Function CustomerExists(ByVal ID_Number As String) As Boolean
+    Public Function CustomerExists(ByVal ID_Number As String, ByRef cid As Integer) As Boolean
         Dim strSelect As String = String.Format(" SELECT * FROM customer WHERE cust_id_number = '{0}';", ID_Number)
 
         Dim pg As New CyberClasses.PG
         Dim ds As New DataSet
         pg.ConnectToDB(strSelect, ds)
         If ds.Tables(0).Rows.Count > 0 Then
+            cid = CInt(ds.Tables(0).Rows(0).Item("id"))
             Return True
         Else
             Return False

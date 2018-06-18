@@ -112,30 +112,42 @@
         With scanid
             .MdiParent = Me
             .ScannedFromMain = False
-            .CustomerScan = True
-            .TicketScan = False
+            .NewCustomerScan = True
+            .ExisCustomerScan = False
+            .NewTicketScan = False
+            .OpenTicketScan = False
             .Show()
         End With
     End Sub
 
     Private Sub btnTicketsNew_Click(sender As Object, e As EventArgs) Handles btnTicketsNew.Click
+        Dim nt As New NewTicketForm
+        With nt
+            .MdiParent = Me
+            .WindowState = FormWindowState.Maximized
+            .Show()
+            btnPurchasing.Checked = False
+            tsPurchasing.Visible = False
 
+
+
+        End With
     End Sub
 
     Private Sub ScanCustomerIDToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ScanCustomerIDToolStripMenuItem.Click
         Dim scanid As New BarcodeScannerForm
         With scanid
             .MdiParent = Me
-            .ScannedFromMain = False
-            .CustomerScan = False
-            .TicketScan = True
             .Show()
+
         End With
     End Sub
 
     Private Sub ScanCustomerIDToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ScanCustomerIDToolStripMenuItem2.Click
 
     End Sub
+
+
 
 
 

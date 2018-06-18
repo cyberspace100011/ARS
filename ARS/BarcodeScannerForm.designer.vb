@@ -27,22 +27,26 @@ Partial Class BarcodeScannerForm
         '
         'txtBarcodeData
         '
+        Me.txtBarcodeData.BackColor = System.Drawing.SystemColors.WindowText
         Me.txtBarcodeData.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtBarcodeData.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtBarcodeData.ForeColor = System.Drawing.SystemColors.Window
         Me.txtBarcodeData.Location = New System.Drawing.Point(0, 0)
+        Me.txtBarcodeData.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBarcodeData.Multiline = True
         Me.txtBarcodeData.Name = "txtBarcodeData"
-        Me.txtBarcodeData.Size = New System.Drawing.Size(301, 45)
+        Me.txtBarcodeData.Size = New System.Drawing.Size(337, 304)
         Me.txtBarcodeData.TabIndex = 1
         '
-        'frmBarcodeScanner
+        'BarcodeScannerForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(301, 45)
+        Me.ClientSize = New System.Drawing.Size(337, 304)
         Me.Controls.Add(Me.txtBarcodeData)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
-        Me.Name = "frmBarcodeScanner"
+        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Name = "BarcodeScannerForm"
         Me.Text = "Scan Code on Drivers Licence Now"
         Me.ResumeLayout(False)
         Me.PerformLayout()

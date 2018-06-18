@@ -30,7 +30,6 @@ Partial Class MainForm
         Me.btnTickets = New System.Windows.Forms.ToolStripDropDownButton()
         Me.btnTicketsNew = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScanCustomerIDToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btnTicketsVoid = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnTicketsReprint = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnCustomers = New System.Windows.Forms.ToolStripDropDownButton()
@@ -114,7 +113,6 @@ Partial Class MainForm
         Me.HeloToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProgramHelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutARSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsPurchasing.SuspendLayout()
         Me.tsInventory.SuspendLayout()
         Me.tsExpenses.SuspendLayout()
@@ -156,7 +154,7 @@ Partial Class MainForm
         '
         'btnTickets
         '
-        Me.btnTickets.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnTicketsNew, Me.btnTicketsVoid, Me.btnTicketsReprint})
+        Me.btnTickets.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnTicketsNew, Me.btnTicketsReprint})
         Me.btnTickets.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnTickets.Name = "btnTickets"
         Me.btnTickets.Size = New System.Drawing.Size(57, 22)
@@ -167,29 +165,23 @@ Partial Class MainForm
         Me.btnTicketsNew.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanCustomerIDToolStripMenuItem})
         Me.btnTicketsNew.Image = Global.ARS.My.Resources.Resources.CheckBook
         Me.btnTicketsNew.Name = "btnTicketsNew"
-        Me.btnTicketsNew.Size = New System.Drawing.Size(156, 26)
+        Me.btnTicketsNew.Size = New System.Drawing.Size(117, 22)
         Me.btnTicketsNew.Text = "New"
         '
         'ScanCustomerIDToolStripMenuItem
         '
         Me.ScanCustomerIDToolStripMenuItem.Image = Global.ARS.My.Resources.Resources.barcode_scanner
         Me.ScanCustomerIDToolStripMenuItem.Name = "ScanCustomerIDToolStripMenuItem"
-        Me.ScanCustomerIDToolStripMenuItem.Size = New System.Drawing.Size(172, 26)
+        Me.ScanCustomerIDToolStripMenuItem.Size = New System.Drawing.Size(168, 22)
         Me.ScanCustomerIDToolStripMenuItem.Text = "Scan Customer ID"
-        '
-        'btnTicketsVoid
-        '
-        Me.btnTicketsVoid.Image = Global.ARS.My.Resources.Resources.cancel
-        Me.btnTicketsVoid.Name = "btnTicketsVoid"
-        Me.btnTicketsVoid.Size = New System.Drawing.Size(156, 26)
-        Me.btnTicketsVoid.Text = "Void/Edit"
+        Me.ScanCustomerIDToolStripMenuItem.Visible = False
         '
         'btnTicketsReprint
         '
         Me.btnTicketsReprint.Image = Global.ARS.My.Resources.Resources.Print
         Me.btnTicketsReprint.Name = "btnTicketsReprint"
-        Me.btnTicketsReprint.Size = New System.Drawing.Size(156, 26)
-        Me.btnTicketsReprint.Text = "Reprint"
+        Me.btnTicketsReprint.Size = New System.Drawing.Size(117, 22)
+        Me.btnTicketsReprint.Text = "Manage"
         '
         'ToolStripSeparator11
         '
@@ -209,14 +201,14 @@ Partial Class MainForm
         Me.btnCustomersNew.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanCustomerIDToolStripMenuItem1})
         Me.btnCustomersNew.Image = Global.ARS.My.Resources.Resources.people
         Me.btnCustomersNew.Name = "btnCustomersNew"
-        Me.btnCustomersNew.Size = New System.Drawing.Size(156, 26)
+        Me.btnCustomersNew.Size = New System.Drawing.Size(117, 22)
         Me.btnCustomersNew.Text = "New"
         '
         'ScanCustomerIDToolStripMenuItem1
         '
         Me.ScanCustomerIDToolStripMenuItem1.Image = Global.ARS.My.Resources.Resources.barcode_scanner
         Me.ScanCustomerIDToolStripMenuItem1.Name = "ScanCustomerIDToolStripMenuItem1"
-        Me.ScanCustomerIDToolStripMenuItem1.Size = New System.Drawing.Size(172, 26)
+        Me.ScanCustomerIDToolStripMenuItem1.Size = New System.Drawing.Size(168, 22)
         Me.ScanCustomerIDToolStripMenuItem1.Text = "Scan Customer ID"
         '
         'btnCustomersManage
@@ -224,14 +216,14 @@ Partial Class MainForm
         Me.btnCustomersManage.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScanCustomerIDToolStripMenuItem2})
         Me.btnCustomersManage.Image = Global.ARS.My.Resources.Resources.people
         Me.btnCustomersManage.Name = "btnCustomersManage"
-        Me.btnCustomersManage.Size = New System.Drawing.Size(156, 26)
+        Me.btnCustomersManage.Size = New System.Drawing.Size(117, 22)
         Me.btnCustomersManage.Text = "Manage"
         '
         'ScanCustomerIDToolStripMenuItem2
         '
         Me.ScanCustomerIDToolStripMenuItem2.Image = Global.ARS.My.Resources.Resources.barcode_scanner
         Me.ScanCustomerIDToolStripMenuItem2.Name = "ScanCustomerIDToolStripMenuItem2"
-        Me.ScanCustomerIDToolStripMenuItem2.Size = New System.Drawing.Size(172, 26)
+        Me.ScanCustomerIDToolStripMenuItem2.Size = New System.Drawing.Size(168, 22)
         Me.ScanCustomerIDToolStripMenuItem2.Text = "Scan Customer ID"
         '
         'ToolStripSeparator2
@@ -747,7 +739,7 @@ Partial Class MainForm
         '
         'HeloToolStripMenuItem
         '
-        Me.HeloToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProgramHelpToolStripMenuItem, Me.AboutARSToolStripMenuItem, Me.ToolStripMenuItem6})
+        Me.HeloToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProgramHelpToolStripMenuItem, Me.AboutARSToolStripMenuItem})
         Me.HeloToolStripMenuItem.Name = "HeloToolStripMenuItem"
         Me.HeloToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HeloToolStripMenuItem.Text = "&Help"
@@ -755,20 +747,14 @@ Partial Class MainForm
         'ProgramHelpToolStripMenuItem
         '
         Me.ProgramHelpToolStripMenuItem.Name = "ProgramHelpToolStripMenuItem"
-        Me.ProgramHelpToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
+        Me.ProgramHelpToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.ProgramHelpToolStripMenuItem.Text = "Program Help"
         '
         'AboutARSToolStripMenuItem
         '
         Me.AboutARSToolStripMenuItem.Name = "AboutARSToolStripMenuItem"
-        Me.AboutARSToolStripMenuItem.Size = New System.Drawing.Size(194, 22)
+        Me.AboutARSToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AboutARSToolStripMenuItem.Text = "About ARS"
-        '
-        'ToolStripMenuItem6
-        '
-        Me.ToolStripMenuItem6.Name = "ToolStripMenuItem6"
-        Me.ToolStripMenuItem6.Size = New System.Drawing.Size(194, 22)
-        Me.ToolStripMenuItem6.Text = "Cap All Customer Data"
         '
         'MainForm
         '
@@ -818,7 +804,6 @@ Partial Class MainForm
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
     Friend WithEvents btnTickets As ToolStripDropDownButton
     Friend WithEvents btnTicketsNew As ToolStripMenuItem
-    Friend WithEvents btnTicketsVoid As ToolStripMenuItem
     Friend WithEvents btnTicketsReprint As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator11 As ToolStripSeparator
     Friend WithEvents btnCustomers As ToolStripDropDownButton
@@ -900,7 +885,6 @@ Partial Class MainForm
     Friend WithEvents HeloToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProgramHelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutARSToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem6 As ToolStripMenuItem
     Friend WithEvents ScanCustomerIDToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ScanCustomerIDToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ScanCustomerIDToolStripMenuItem2 As ToolStripMenuItem

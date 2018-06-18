@@ -56,8 +56,6 @@ Partial Class NewCustomerForm
         Me.ObtainImageFromScannerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CaptureImageFromSystemCameraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ctxCusPhoto = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.grpImages = New System.Windows.Forms.GroupBox()
         Me.btnClear = New System.Windows.Forms.ToolStripButton()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
@@ -125,10 +123,11 @@ Partial Class NewCustomerForm
         Me.txtCusFName = New System.Windows.Forms.TextBox()
         Me.grpCustomerInfo = New System.Windows.Forms.GroupBox()
         Me.txtCusTelephone = New System.Windows.Forms.MaskedTextBox()
+        Me.ImageControls1 = New ARS.ImageControls()
+        Me.ImageControls2 = New ARS.ImageControls()
         Me.grpCusIDinfo.SuspendLayout()
         Me.ctxDL.SuspendLayout()
         Me.ctxCusPhoto.SuspendLayout()
-        Me.grpImages.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.grpTransport.SuspendLayout()
         Me.grpEmployer.SuspendLayout()
@@ -468,28 +467,6 @@ Partial Class NewCustomerForm
         Me.ctxCusPhoto.Name = "ctxImages"
         Me.ctxCusPhoto.Size = New System.Drawing.Size(399, 70)
         Me.ctxCusPhoto.Text = "Customer Photo Options"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(5, 14)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(82, 13)
-        Me.Label23.TabIndex = 10
-        Me.Label23.Text = "Customer Photo"
-        '
-        'grpImages
-        '
-        Me.grpImages.Controls.Add(Me.Label23)
-        Me.grpImages.Location = New System.Drawing.Point(387, 287)
-        Me.grpImages.Margin = New System.Windows.Forms.Padding(2)
-        Me.grpImages.Name = "grpImages"
-        Me.grpImages.Padding = New System.Windows.Forms.Padding(2)
-        Me.grpImages.Size = New System.Drawing.Size(430, 233)
-        Me.grpImages.TabIndex = 4
-        Me.grpImages.TabStop = False
-        Me.grpImages.Text = "Customer Images"
         '
         'btnClear
         '
@@ -1229,14 +1206,47 @@ Partial Class NewCustomerForm
         Me.txtCusTelephone.Size = New System.Drawing.Size(336, 22)
         Me.txtCusTelephone.TabIndex = 9
         '
+        'ImageControls1
+        '
+        Me.ImageControls1.AddedImage = False
+        Me.ImageControls1.ControlLabel = "Customer Photo"
+        Me.ImageControls1.FinishedSavingImage = False
+        Me.ImageControls1.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ImageControls1.imageId = 0
+        Me.ImageControls1.ImageLocation = Nothing
+        Me.ImageControls1.IMGType = 0
+        Me.ImageControls1.Location = New System.Drawing.Point(391, 294)
+        Me.ImageControls1.Margin = New System.Windows.Forms.Padding(2)
+        Me.ImageControls1.Name = "ImageControls1"
+        Me.ImageControls1.ShowClearButton = False
+        Me.ImageControls1.Size = New System.Drawing.Size(196, 230)
+        Me.ImageControls1.TabIndex = 13
+        '
+        'ImageControls2
+        '
+        Me.ImageControls2.AddedImage = False
+        Me.ImageControls2.ControlLabel = "Driver's License Image"
+        Me.ImageControls2.FinishedSavingImage = False
+        Me.ImageControls2.Font = New System.Drawing.Font("Times New Roman", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ImageControls2.imageId = 0
+        Me.ImageControls2.ImageLocation = Nothing
+        Me.ImageControls2.IMGType = 0
+        Me.ImageControls2.Location = New System.Drawing.Point(610, 294)
+        Me.ImageControls2.Margin = New System.Windows.Forms.Padding(2)
+        Me.ImageControls2.Name = "ImageControls2"
+        Me.ImageControls2.ShowClearButton = False
+        Me.ImageControls2.Size = New System.Drawing.Size(196, 171)
+        Me.ImageControls2.TabIndex = 13
+        '
         'NewCustomerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1215, 916)
+        Me.Controls.Add(Me.ImageControls2)
+        Me.Controls.Add(Me.ImageControls1)
         Me.Controls.Add(Me.grpEmployer)
         Me.Controls.Add(Me.grpCusIDinfo)
-        Me.Controls.Add(Me.grpImages)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.grpTransport)
         Me.Controls.Add(Me.grpCustomerInfo)
@@ -1246,8 +1256,6 @@ Partial Class NewCustomerForm
         Me.grpCusIDinfo.PerformLayout()
         Me.ctxDL.ResumeLayout(False)
         Me.ctxCusPhoto.ResumeLayout(False)
-        Me.grpImages.ResumeLayout(False)
-        Me.grpImages.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.grpTransport.ResumeLayout(False)
@@ -1290,8 +1298,6 @@ Partial Class NewCustomerForm
     Friend WithEvents ObtainImageFromScannerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CaptureImageFromSystemCameraToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ctxCusPhoto As ContextMenuStrip
-    Friend WithEvents Label23 As Label
-    Friend WithEvents grpImages As GroupBox
     Friend WithEvents btnClear As ToolStripButton
     Friend WithEvents Label41 As Label
     Friend WithEvents Label40 As Label
@@ -1363,4 +1369,6 @@ Partial Class NewCustomerForm
     Friend WithEvents Label20 As Label
     Friend WithEvents txtCusTelephone As MaskedTextBox
     Friend WithEvents txtEmpTelephone As MaskedTextBox
+    Friend WithEvents ImageControls1 As ImageControls
+    Friend WithEvents ImageControls2 As ImageControls
 End Class

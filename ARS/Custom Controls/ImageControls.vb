@@ -6,11 +6,19 @@
 
     Private mstrImageLoc As String
     Private mintImageID As Integer
+    Private _ControlLabel As String
 
 
 
-
-
+    Public Property ControlLabel As String
+        Get
+            Return _ControlLabel
+        End Get
+        Set(value As String)
+            _ControlLabel = value
+            lblControlLabel.Text = value
+        End Set
+    End Property
     Property IMGType As Integer
         Get
             Return mintImageType
@@ -107,6 +115,13 @@
 
 
     Private Sub CameraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CameraToolStripMenuItem.Click
+        Dim camera As New CaptureCameraImage
+        With camera
+            .ShowDialog()
+            ImageLocation = camera.NewImagePath
+
+        End With
+
         'TakeNewPhoto()
     End Sub
     'TODO: Implement Take New Photo Form
@@ -152,5 +167,28 @@
 
     End Sub
 
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
 
+    End Sub
+
+    Private Sub ScannerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ScannerToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("c:\windows\system32\wiaacmgr.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub FilesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FilesToolStripMenuItem.Click
+        Dim ofd As New OpenFileDialog
+        With ofd
+            If .ShowDialog() = DialogResult.OK Then
+                If .FileName <> Nothing Then
+                    ImageLocation = .FileName
+
+                End If
+            End If
+
+        End With
+    End Sub
 End Class
